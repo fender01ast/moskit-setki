@@ -54,3 +54,6 @@ button {
 input[type="radio"] {
     margin-right: 7px;
 }
+input[value="anti_dust_gray"] + span { 
+    color: gray;
+}
