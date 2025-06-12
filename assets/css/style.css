@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    padding: 20px;
+}
+.calculator {
+    background: #fff;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+label, input[type="number"], input[type="text"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.radio-group {
+    margin-bottom: 15px;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.custom-mesh-label {
+    display: flex;
+    align-items: center;
+}
+.custom-input {
+    margin-left: 10px;
+    width: 60px;
+    flex-shrink: 0;
+}
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #520ca2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+#customMeshPrice {
+    width: 100px;
+    margin: 0 0 0 10px;
+}
+input[type="radio"] {
+    margin-right: 7px;
+}
