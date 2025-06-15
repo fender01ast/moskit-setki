@@ -18,6 +18,8 @@ label, input[type="number"], input[type="text"] {
 }
 .radio-group {
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 .radio-group label {
     display: flex;
@@ -54,6 +56,36 @@ button {
 input[type="radio"] {
     margin-right: 7px;
 }
-input[value="anti_dust_gray"] + span { 
+/*input[value="anti_dust_gray"] + span { 
     color: gray;
+}*/
+h1{
+    color: #009fc4;
+    text-align: center;
+    font-weight: 900;
+}
+h2{
+    text-align: center;
+    font-weight: 700;
+}
+h3{
+    margin: 3px 0 8px;
+    font-weight: 600;
+    text-align: center;
+}
+.title-text{
+    font-weight: 600;
+    text-align: center;
+    text-decoration-line: underline;
+    margin: 5px 0 10px 0;
+}
+.logo-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.calculate-btn{
+    background-color: #009fc4;
+    font-weight: 600;
+    cursor: pointer;
 }

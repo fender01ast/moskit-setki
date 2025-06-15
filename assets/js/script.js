@@ -64,10 +64,10 @@ function calculatePrice() {
   let gridPrice = gridInput ? (gridPrices[gridInput.value] || 0) : 0;
 
   let framePrice = 0;
-  if ((meshInput && meshInput.value === 'plisse') || (gridInput && gridInput.value === 'transparent_plisse')) {
+  if ((meshInput && meshInput.value === 'plisse') || (gridInput && gridInput.value === 'transparent_plisse') || (gridInput && gridInput.value === 'profile') || (gridInput && gridInput.value === 'horizontal') || (gridInput && gridInput.value === 'transparent') || (gridInput && gridInput.value === 'combo')) {
     framePrice = 0;
   } else {
-    framePrice = frameInput?.value === 'inside' ? 2000 : 0;
+    framePrice = frameInput?.value === 'inside' ? 0 : -2000;
   }
 
   const total = Math.round(area * (meshPrice + gridPrice) + framePrice);
