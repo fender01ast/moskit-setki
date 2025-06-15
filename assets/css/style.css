@@ -102,7 +102,8 @@ h3{
 .calculator{
     background-color: #8be6ff3d;
 }
-input[type="number"].width-height__input{
+input[type="number"].width-height__input,
+input[type="text"].width-height__input{
     width: 50px;
     height: 45px;
 }

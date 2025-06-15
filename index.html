@@ -14,10 +14,10 @@
     <h2>Калькулятор москитных сеток</h2>
     <div class="width-height__container">
         <label><h3>Ширина окна (мм):</h3>
-          <input type="number" id="width" min="0" pattern="\d*" inputmode="numeric" class="width-height__input">
+          <input type="text" id="width" min="0" pattern="\d*" inputmode="numeric" class="width-height__input">
         </label>
         <label><h3>Высота окна (мм):</h3>
-          <input type="number" id="height" min="0" pattern="\d*" inputmode="numeric" class="width-height__input">
+          <input type="text" id="height" min="0" pattern="\d*" inputmode="numeric" class="width-height__input">
         </label>
     </div>
     <div class="radio-group">
@@ -39,7 +39,7 @@
       <label class="custom-mesh-label">
         <input type="radio" name="meshType" value="custom"> 
         <span style="text-decoration: underline; font-weight: 600;">Свое значение</span>
-        <input type="number" id="customMeshPrice" class="custom-input" placeholder="₸/м²" pattern="\d*" inputmode="numeric">
+        <input type="text" id="customMeshPrice" class="custom-input" placeholder="₸/м²" pattern="\d*" inputmode="numeric">
       </label>
     </div>
 
