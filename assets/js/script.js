@@ -22,6 +22,7 @@ function calculatePrice() {
   const gridInput = document.querySelector('input[name="gridType"]:checked');
   const frameInput = document.querySelector('input[name="frameType"]:checked');
   const customMeshInput = document.getElementById("customMeshPrice");
+  document.getElementById("result").style.padding = '8px';
 
   if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) {
     document.getElementById("result").textContent = "Пожалуйста, введите корректные размеры.";
@@ -32,10 +33,12 @@ function calculatePrice() {
 
   const meshPrices = {
     simple: 17250,
+    anti_mosquito_smart: 19230,
     anti_mosquito_gray: 24850,
     anti_mosquito_black: 26850,
     anti_mosquito_48: 36850,
     anti_dust_black: 36560,
+    anti_dust_white: 31560,
     anti_dust_gray: 33560,
     anti_dust_30: 42500,
     anti_mosquito_30: 30000,
@@ -49,6 +52,7 @@ function calculatePrice() {
     none: 0,
     profile: 21200,
     horizontal: 25200,
+    horizontal_strong: 27200,
     transparent: 42500,
     combo: 29200,
     transparent_plisse: 75000
@@ -64,7 +68,7 @@ function calculatePrice() {
   let gridPrice = gridInput ? (gridPrices[gridInput.value] || 0) : 0;
 
   let framePrice = 0;
-  if ((meshInput && meshInput.value === 'plisse') || (gridInput && gridInput.value === 'transparent_plisse') || (gridInput && gridInput.value === 'profile') || (gridInput && gridInput.value === 'horizontal') || (gridInput && gridInput.value === 'transparent') || (gridInput && gridInput.value === 'combo')) {
+  if ((meshInput && meshInput.value === 'plisse') || (gridInput && gridInput.value === 'transparent_plisse') || (gridInput && gridInput.value === 'profile') || (gridInput && gridInput.value === 'horizontal') || (gridInput && gridInput.value === 'horizontal_strong') || (gridInput && gridInput.value === 'transparent') || (gridInput && gridInput.value === 'combo')) {
     framePrice = 0;
   } else {
     framePrice = frameInput?.value === 'inside' ? 0 : -2000;

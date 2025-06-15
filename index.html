@@ -9,41 +9,44 @@
 </head>
 <body>
   <div class="calculator">
-    <div class="logo-wrapper"><img src="assets/images/logo.webp" alt="logo" class="site-logo"></div>
+    <div class="logo-wrapper"><img src="assets/images/logo.webp" alt="центр-окон__logo" class="site-logo"></div>
     <h1>Центр Окон</h1>
     <h2>Калькулятор москитных сеток</h2>
-    <label><h3>Ширина окна (мм):</h3>
-      <input type="number" id="width" min="0">
-    </label>
-    <label><h3>Высота окна (мм):</h3>
-      <input type="number" id="height" min="0">
-    </label>
-
+    <div class="width-height__container">
+        <label><h3>Ширина окна (мм):</h3>
+          <input type="number" id="width" min="0" pattern="\d*" inputmode="numeric" class="width-height__input">
+        </label>
+        <label><h3>Высота окна (мм):</h3>
+          <input type="number" id="height" min="0" pattern="\d*" inputmode="numeric" class="width-height__input">
+        </label>
+    </div>
     <div class="radio-group">
       <span class="title-text">Тип полотна:</span>
       <label><input type="radio" name="meshType" value="simple" checked><span>Простое — 17 250 ₸/м²</span></label>
+      <label><input type="radio" name="meshType" value="anti_mosquito_smart"><span>Антимошка Smart — 19 230 ₸/м²</span></label>
       <label><input type="radio" name="meshType" value="anti_mosquito_gray"><span>Антимошка серая — 24 850 ₸/м²</span></label>
       <label><input type="radio" name="meshType" value="anti_mosquito_black"><span>Антимошка черная — 26 850 ₸/м²</span></label>
-      <label><input type="radio" name="meshType" value="anti_mosquito_48"><span>Антимошка 48 — 36 850 ₸/м²</span></label>
       <label><input type="radio" name="meshType" value="anti_mosquito_30"><span>Антимошка 30 — 30 000 ₸/м²</span></label>
-      <label><input type="radio" name="meshType" value="anti_dust_black"><span>Антипыль черная — 36 560 ₸/м²</span></label>
+      <label><input type="radio" name="meshType" value="anti_mosquito_48"><span>Антимошка 48 — 36 850 ₸/м²</span></label>
+      <label><input type="radio" name="meshType" value="anti_dust_white"><span>Антипыль белая — 31 560 ₸/м²</span></label>
       <label><input type="radio" name="meshType" value="anti_dust_gray"><span>Антипыль серая — 33 560 ₸/м²</span></label>
+      <label><input type="radio" name="meshType" value="anti_dust_black"><span>Антипыль черная — 36 560 ₸/м²</span></label>
       <label><input type="radio" name="meshType" value="anti_dust_30"><span>Антипыль 3-х слойная — 42 500 ₸/м²</span></label>
-      <label><input type="radio" name="meshType" value="plisse"><span>Плиссе — 35 000 ₸/м²</span></label>
+      <label><input type="radio" name="meshType" value="cat_black"><span>Антикошка черная — 30 000 ₸/м²</span></label>
       <label><input type="radio" name="meshType" value="cat_steel"><span>Антикошка сталь — 35 000 ₸/м²</span></label>
       <label><input type="radio" name="meshType" value="cat_dust"><span>Антикошка + антипыль — 45 000 ₸/м²</span></label>
-      <label><input type="radio" name="meshType" value="cat_black"><span>Антикошка черная — 30 000 ₸/м²</span></label>
+      <label><input type="radio" name="meshType" value="plisse"><span>Плиссе — 35 000 ₸/м²</span></label>
       <label class="custom-mesh-label">
         <input type="radio" name="meshType" value="custom"> 
         <span style="text-decoration: underline; font-weight: 600;">Свое значение</span>
-        <input type="number" id="customMeshPrice" class="custom-input" placeholder="₸/м²">
+        <input type="number" id="customMeshPrice" class="custom-input" placeholder="₸/м²" pattern="\d*" inputmode="numeric">
       </label>
     </div>
 
     <div class="radio-group" id="frameGroup">
       <span class="title-text">Тип профиля:</span>
-      <label><input type="radio" name="frameType" value="outside"> Наружняя</label>
-      <label><input type="radio" name="frameType" value="inside"> Внутренняя</label>
+      <label><input type="radio" name="frameType" value="outside"> Наружный</label>
+      <label><input type="radio" name="frameType" value="inside"> Внутренний</label>
     </div>
 
     <div class="radio-group">
@@ -51,6 +54,7 @@
       <!--<label><input type="radio" name="gridType" value="none"> Без решётки</label>-->
       <label><input type="radio" name="gridType" value="profile"> Профильная кр. — 21 200 ₸/м²</label>
       <label><input type="radio" name="gridType" value="horizontal"> Горизонтальная — 25 200 ₸/м²</label>
+      <label><input type="radio" name="gridType" value="horizontal_strong"> Горизонтальная (из дверного профиля) — 27 200 ₸/м²</label>
       <label><input type="radio" name="gridType" value="transparent"> Прозрачная — 42 500 ₸/м²</label>
       <label><input type="radio" name="gridType" value="combo"> 2в1 — 29 200 ₸/м²</label>
       <label><input type="radio" name="gridType" value="transparent_plisse"> Прозрачная + плиссе — 75 000 ₸/м²</label>

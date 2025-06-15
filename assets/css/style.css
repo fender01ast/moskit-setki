@@ -77,15 +77,49 @@ h3{
     font-weight: 600;
     text-align: center;
     text-decoration-line: underline;
-    margin: 5px 0 10px 0;
+    margin: 5px 0 18px 0;
 }
 .logo-wrapper{
     width: 100%;
     display: flex;
     justify-content: center;
 }
+.site-logo{
+    border-radius: 5px;
+}
 .calculate-btn{
     background-color: #009fc4;
     font-weight: 600;
     cursor: pointer;
+}
+.result{
+    background-color: #00c900;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    /*padding: 8px;*/
+}
+.calculator{
+    background-color: #8be6ff3d;
+}
+input[type="number"].width-height__input{
+    width: 50px;
+    height: 45px;
+}
+.width-height__container{
+    display: flex;
+    flex-direction: column;
+}
+.width-height__container label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.radio-group{
+    border: 1px solid #009fc4;
+    border-radius: 5px;
+    padding: 7px;
+}
+.radio-group label:not(:last-child){
+    border-bottom: 1px dashed #009fc4;
 }
