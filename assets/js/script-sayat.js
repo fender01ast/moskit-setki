@@ -23,7 +23,7 @@ gridRadios.forEach(radio => {
   });
 });
 
-function calculatePrice() {
+const calculatePrice = () => {
   const width = parseFloat(document.getElementById("width").value);
   const height = parseFloat(document.getElementById("height").value);
   const meshInput = document.querySelector('input[name="meshType"]:checked');
@@ -107,3 +107,5 @@ function calculatePrice() {
 
   document.getElementById("result").textContent = `Стоимость: ${total.toLocaleString()} тенге.`;*/
 }
+
+document.querySelector('.calculate-btn').addEventListener('click', calculatePrice);
