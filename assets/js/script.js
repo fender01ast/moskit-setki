@@ -50,8 +50,10 @@ function calculatePrice() {
     anti_dust_white: 31560,
     anti_dust_gray: 33560,
     anti_dust_30: 42500,
-    anti_mosquito_30: 30000,
+    anti_mosquito_30: 32850,
+    anti_mosquito_26: 30000,
     plisse: 35000,
+    plisse_side: 38000,
     cat_steel: 35000,
     cat_dust: 45000,
     cat_black: 30000
@@ -77,7 +79,7 @@ function calculatePrice() {
   let gridPrice = gridInput ? (gridPrices[gridInput.value] || 0) : 0;
 
   let framePrice = 0;
-  if ((meshInput && meshInput.value === 'plisse') || (gridInput && gridInput.value === 'transparent_plisse') || (gridInput && gridInput.value === 'profile') || (gridInput && gridInput.value === 'horizontal') || (gridInput && gridInput.value === 'horizontal_strong') || (gridInput && gridInput.value === 'transparent') || (gridInput && gridInput.value === 'combo')) {
+  if ((meshInput && meshInput.value === 'plisse') || (gridInput && gridInput.value === 'transparent_plisse') || (gridInput && gridInput.value === 'profile') || (gridInput && gridInput.value === 'horizontal') || (gridInput && gridInput.value === 'horizontal_strong') || (gridInput && gridInput.value === 'transparent') || (gridInput && gridInput.value === 'combo') || (meshInput && meshInput.value === 'plisse_side')) {
     framePrice = 0;
   } else {
     framePrice = frameInput?.value === 'inside' ? 0 : -2000;
@@ -86,7 +88,7 @@ function calculatePrice() {
 
 
   if (((gridInput) && (gridInput.value === 'combo'))) {
-    if ( !(meshInput && meshInput.value === 'simple') && !(meshInput && meshInput.value === 'plisse') && !(meshInput && meshInput.value === 'custom') ) {
+    if ( !(meshInput && meshInput.value === 'simple') && !(meshInput && meshInput.value === 'plisse') && !(meshInput && meshInput.value === 'custom') && !(meshInput && meshInput.value === 'plisse_side') ) {
       const total = Math.round((((area * meshPrice) * 30) / 100) + (area * gridPrice));
       document.getElementById("result").textContent = `Стоимость: ${total.toLocaleString()} тенге.`;
       return total;
