@@ -41,22 +41,22 @@ function calculatePrice() {
   const area = (width / 1000) * (height / 1000);
 
   const meshPrices = {
-    simple: 17250,
-    anti_mosquito_smart: 19230,
-    anti_mosquito_gray: 24850,
-    anti_mosquito_black: 26850,
-    anti_mosquito_48: 36850,
-    anti_dust_black: 36560,
-    anti_dust_white: 31560,
-    anti_dust_gray: 33560,
-    anti_dust_30: 42500,
-    anti_mosquito_30: 32850,
-    anti_mosquito_26: 30000,
-    plisse: 35000,
-    plisse_side: 38000,
-    cat_steel: 35000,
-    cat_dust: 45000,
-    cat_black: 30000
+    simple: 15384,
+    anti_mosquito_smart: 19230 * 90 / 100,
+    anti_mosquito_gray: 24850 * 90 / 100,
+    anti_mosquito_black: 26850 * 90 / 100,
+    anti_mosquito_48: 36850 * 90 / 100,
+    anti_dust_black: 36560 * 90 / 100,
+    anti_dust_white: 31560 * 90 / 100,
+    anti_dust_gray: 33560 * 90 / 100,
+    anti_dust_30: 42500 * 90 / 100,
+    anti_mosquito_30: 32850 * 90 / 100,
+    anti_mosquito_26: 30000 * 90 / 100,
+    plisse: 35000 * 90 / 100,
+    plisse_side: 38000 * 90 / 100,
+    cat_steel: 35000 * 90 / 100,
+    cat_dust: 45000 * 90 / 100,
+    cat_black: 30000 * 90 / 100
   };
 
   const gridPrices = {
@@ -64,7 +64,7 @@ function calculatePrice() {
     profile: 21200,
     horizontal: 25200,
     horizontal_strong: 27200,
-    transparent: 42500,
+    transparent: 40000,
     combo: 29200,
     transparent_plisse: 75000
   };
