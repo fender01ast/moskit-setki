@@ -38,7 +38,11 @@ function calculatePrice() {
     return;
   }
 
-  const area = (width / 1000) * (height / 1000);
+  let area = (width / 1000) * (height / 1000);
+  
+  if (area < 0.52) {
+    area = 0.52;
+  }
 
   const meshPrices = {
     simple: 17250,
