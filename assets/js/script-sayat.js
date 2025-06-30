@@ -38,10 +38,14 @@ const calculatePrice = () => {
     return;
   }
 
-  const area = (width / 1000) * (height / 1000);
+  let area = (width / 1000) * (height / 1000);
+
+  if (area < 0.52) {
+    area = 0.52;
+  }
 
   const meshPrices = {
-    simple: 15384,
+    simple: 13461,
     anti_mosquito_smart: 19230 * 90 / 100,
     anti_mosquito_gray: 24850 * 90 / 100,
     anti_mosquito_black: 26850 * 90 / 100,
