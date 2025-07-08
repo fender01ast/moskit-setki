@@ -125,3 +125,6 @@ input[type="text"].width-height__input{
 .radio-group label:not(:last-child){
     border-bottom: 1px dashed #009fc4;
 }
+span.span_price{
+    display: contents;
+}
