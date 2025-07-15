@@ -38,7 +38,7 @@ function calculatePrice() {
     return;
   }
 
-  let area = (width / 1000) * (height / 1000);
+  let area = ((width + 100) / 1000) * ((height + 100) / 1000);
   
   if (area < 0.52) {
     area = 0.52;
