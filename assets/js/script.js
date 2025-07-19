@@ -31,6 +31,7 @@ function calculatePrice() {
   const frameInput = document.querySelector('input[name="frameType"]:checked');
   const customMeshInput = document.getElementById("customMeshPrice");
   document.getElementById("result").style.padding = '8px';
+  const additionalWidthHeight = 50; /* в миллиметрах */
 
   if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) {
     document.getElementById("result").style.backgroundColor = "red";
@@ -38,7 +39,7 @@ function calculatePrice() {
     return;
   }
 
-  let area = ((width + 50) / 1000) * ((height + 50) / 1000);
+  let area = ((width + additionalWidthHeight) / 1000) * ((height + additionalWidthHeight) / 1000);
   
   if (area < 0.52) {
     area = 0.52;
